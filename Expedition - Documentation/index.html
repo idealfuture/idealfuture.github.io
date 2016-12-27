@@ -1,0 +1,311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Template Documentation Template</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Expedition&rdquo; Documentation by &ldquo;MountainTheme&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<div class="center"><img src="assets/images/logo.png" alt="Logo" /></div>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 21/08/2015<br>
+					By: MountainTheme<br>
+					Email: <a href="mailto:youremail@yourdomain.com">artsandsouls@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/MountainTheme?ref=MountainTheme">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol>
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#services">Services</a></li>
+			<li><a href="#mailchimp">MailChimp</a></li>
+			<li><a href="#googlemap">Google Map</a></li>
+			<li><a href="#countdown">Countdown</a></li>
+			<li><a href="#bg">Background Header</a></li>
+			<li><a href="#contactform">Contact Form</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>1) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>This theme is a fixed layout with two columns. All of the information within the main content area is nested within a div with an id of "primaryContent". The sidebar's (column #2) content is within a div with an id of "secondaryContent". The general template structure is the same throughout the template. Here is the general structure.</p>
+		
+		<img src="assets/images/htmlstructure.png" alt="HTML Structure" />
+		
+		<p>If you would like to edit the color, font, or style of any elements in one of these columns, you would do the following:</p>
+
+<pre>	#primaryContent a {
+		color: #someColor;
+	} 
+</pre>
+
+		<p>If you find that your new style is not overriding, it is most likely because of a specificity problem. Scroll down in your CSS file and make sure that there isn't a similar style that has more weight.</p>
+
+		<p>I.E.</p>
+
+<pre>	#wrap #primaryContent a {
+		color: #someColor;
+	}
+</pre>
+
+		<p>So, to ensure that your new styles are applied, make sure that they carry enough "weight" and that there isn't a style lower in the CSS file that is being applied after yours.</p> 
+
+		<hr>
+
+		<h3 id="cssFiles"><strong>2) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>I'm using two CSS files in this theme. The first one is a generic reset file. Many browser interpret the default behavior of html elements differently. By using a general reset CSS file, we can work round this. This file also contains some general styling, such as anchor tag colors, font-sizes, etc. Keep in mind, that these values might be overridden somewhere else in the file.</p> 
+
+		<p>The second file contains all of the specific stylings for the page. The file is separated into sections using:</p>  
+
+<pre>	
+
+/* ================================= */
+/* :::::::::: 1. General ::::::::::: */
+/* ================================= */
+
+	some code
+
+/* ================================= */
+/* :::::::::: 2. Header :::::::::::: */
+/* ================================= */
+	
+	some code
+	
+/* ================================= */
+/* :::::::::: 3. Countdown ::::::::: */
+/* ================================= */
+	
+	some code
+	
+/* ================================= */
+/* :::::::::: 4. Services :::::::::: */
+/* ================================= */
+	
+	some code
+
+/* ================================= */
+/* :::::::::: 5. About ::::::::::::: */
+/* ================================= */
+	
+	some code
+
+/* ================================= */
+/* :::::::::: 6. Contact ::::::::::: */
+/* ================================= */
+	
+	some code
+
+/* ================================= */
+/* :::::::::: 7. Google map :::::::: */
+/* ================================= */
+	
+	some code
+
+/* ================================= */
+/* :::::::::: 8. Subscribe ::::::::: */
+/* ================================= */
+	
+	some code
+
+/* ================================= */
+/* :::::::::: 9. Footer :::::::::::: */
+/* ================================= */
+	
+	some code
+
+/* ================================= */
+/* :::::: 10. Responsive CSS ::::::: */
+/* ================================= */
+	
+	some code
+
+</pre>
+		
+		<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+
+		<p>Any images that are placed within the services section have 5px worth of padding and a light bluish background. If you would like to edit the display of these images, find the following section in the style sheet:</p>
+
+<pre>	.logo  img {
+		change styles here:
+	}
+</pre>
+
+		<hr>
+
+		<h3 id="services"><strong>3) Services</strong> - <a href="#toc">top</a></h3>
+		<p>To change the icon (from the Font Awesome collection http://fortawesome.github.io/Font-Awesome/icons/), look for a line of HTML like this:</p>
+
+<code><p>&lt;i class=&quot;fa fa-desktop fa-fw&quot; /&gt;&lt;/i&gt;</p></code>
+
+<p>To change the icon, choose one from the list of Font Awesome Icons and get the CSS class for that icon (usually with the fa- prefix e.g. fa-rocket), and use this CSS code in the tags to use that icon instead</p>
+
+<code><p>&lt;i class=&quot;fa YOUR-FONT-AWESOME-ICON-CLASS fa-fw&quot; /&gt;&lt;/i&gt;</p> </code>
+
+		<hr>
+		
+		<h3 id="mailchimp"><strong>4) MailChimp</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme MailChimp Intergrated.</p>
+		
+<p>Mailchimp (subscription) in the file changes main.js, section   7. Ajax mailchimp</p>
+
+<p>In url parameter you have to put your signup form URL. Follow these steps to get this URL address:</p>
+
+<p><b>1.</b> Login to MailChimp and go to Lists</p>
+
+<p><b>2.</b> Open your chosen list and click on Signup forms</p>
+
+<p><b>3.</b> Click on General forms</p>
+
+<p><b>4.</b> Find Signup form URL, copy the URL</p>
+
+<p><b>5.</b> Open in your browser this page: <b>www.unshorten.it,</b> paste Signup form URL and press unshorten button</p>
+
+<p><b>6.</b> You'll resolve URL similar to this one:</p>
+
+<p>http://xxx.xxx.us8.list-manage1.com/subscribe?u=xxx&id=xxx</p>
+
+<p>) Please add /post after subscribe:</p>
+
+<p>http://xxx.xxx.us8.list-manage1.com/subscribe/post?u=xxx&id=xxx</p>
+
+<p>Finally, copy URL and paste to url in main.js</p>
+
+<p>// Example MailChimp url: http://xxx.xxx.list-manage.com/subscribe/post?u=xxx&id=xxx
+    $('#subscribe').ajaxChimp({
+  language: 'eng',
+  url: 'http://stevedogs.us9.list-manage.com/subscribe/post?u=df0aa2ea10f32337b29b342d4&id=41ddc569b4'
+    });
+		</p>
+		<hr>
+
+		<h3 id="googlemap"><strong>5) Google Map</strong> - <a href="#toc">top</a></h3>
+		
+		<p>1. To change information in Google map you need to open main.js and find Google Map section coordinate variables and change the coordinates </p>
+ 
+		<p>var latitude = -37.8602828,</p>
+  		<p>longitude = 145.079616, 9</p>
+	
+		<hr>
+
+		<h3 id="countdown"><strong>6) Countdown</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Open up the <code>main.js</code> file, and look for the Countdown section of variables. Only one variable is required to set up the countdown, and it is responsible for setting the date and time that the script will countdown to.</p>
+			<p><pre>var endDate = "Dec 01, 2015 20:39:00";</pre></p>
+			<p>Enter the date in the format Dec 01, 2015 20:39:00.</p>
+		<hr>
+	
+<h3 id="bg"><strong>7) Background Header</strong> - <a href="#toc">top</a></h3>
+	
+	<h4><b>1. Background image </b></h4>
+
+	<p>Background image code looks like this:
+				<pre>
+$("body").backstretch("images/background3.jpg");</pre>
+			</p>	
+
+
+
+<h4><b>2. Slideshow</b></h4>
+<p>Open up the <code>main.js</code> file, and look for the slideshow section  - the in item 4 you see inside the main.js file.</p>
+				<p>You'll see some variables slideshow that look like this:
+				<pre>
+$("body").backstretch([
+        "images/background1.jpg", 
+        "images/background2.jpg", 
+        "images/background3.jpg", 
+        "images/background4.jpg"
+    ],{duration: 3000, fade: 750});</pre>
+			</p>
+
+
+
+	<h4><b>3. Video Background</b></h4>
+<p>To enable the video background, remove comment (&lt;!--  --&gt;)  the file index.html is items YOUTUBE PLAYER, YOUTUBE CONTROLS</p>
+			<p>File index.html:
+			<pre>
+ &lt;!-- YOUTUBE PLAYER --&gt;
+   &lt;div class=&quot;BackgroundVideo&quot; data-property=&quot;{videoURL:'https://www.youtube.com/watch?v=kh29_SERH0Y'<br> containment:'body', startAt:0, mute:false, autoPlay:true, <br>loop:true, opacity:1, showControls:false, showYTLogo:false, vol:25}&quot;&gt;&lt;/div&gt;
+    &lt;!-- /YOUTUBE PLAYER --&gt;
+
+     &lt;!-- YOUTUBE CONTROLS --&gt;
+        &lt;div class=&quot;player-controls&quot;&gt;
+            &lt;a id=&quot;play&quot; class=&quot;fa fa-volume-up&quot; href=&quot;#&quot;&gt;&amp;nbsp;&lt;/a&gt;
+            &lt;a id=&quot;pause&quot; class=&quot;fa fa-pause&quot; href=&quot;#&quot;&gt;&amp;nbsp;&lt;/a&gt;
+          &lt;/div&gt;
+      &lt;!-- /YOUTUBE CONTROLS --&gt;
+			</pre>
+			</p>
+		<hr>
+
+		<h3 id="contactform"><strong>8) Contact Form</strong> - <a href="#toc">top</a></h3>
+		
+		<p>An email in the contact form in the file changes contact.php in folder php</p>
+		<p>variable $mail = mail("youremail@youremailaddress.com", $subject, $message</p>
+	
+		<hr>
+		
+		<h3 id="credits"><strong>9) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the following images, icons or other files as listed.
+		
+	<ul>
+					<li><a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a></li>
+					<li><a href="https://github.com/srobbin/jquery-backstretch" target="_blank">Backstretch - jQuery Plugin</a></li>
+					<li><a href="https://github.com/pupunzi/jquery.mb.YTPlayer" target="_blank">YTPlayer - jQuery Plugin</a></li>
+					<li><a href="http://github.com/rendro/countdown/" target="_blank">CoutDown</a></li>
+					<li><a href="https://github.com/julianlloyd/scrollReveal.js/tree/master" target="_blank">ScrollReveal</a></li>
+					<li><a href="https://github.com/scdoshi/jquery-ajaxchimp" target="_blank">ajaxChimp</a></li>
+					<li><a href="http://jqueryvalidation.org/" target="_blank">jQuery Validation Plugin</a></li>
+					<li><a href="http://www.google.com/fonts/specimen/Exo" target="_blank">Google Fonts - 'Exo'</a></li>
+					<li><a href="http://www.google.com/fonts/specimen/Aldrich" target="_blank">Google Fonts - 'Aldrich'</a></li>
+					<li><a href="http://unsplash.com" target="_blank">Images from Unsplash</a></li>
+				</ul>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>MountainTheme</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+
+		<!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="assets/js/jquery.js"></script>
+     <!-- Smooth Scroll -->
+    <script src="assets/js/smooth-scroll.js"></script>
+</body>
+</html>
