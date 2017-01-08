@@ -39,7 +39,7 @@ if(!$error)
 $subject ="New message!";
 $message ="New request!\n\nE-mail: ".$email."\n\nName: " .$name."\n\nMessage:".$msg."\n\n";
 
-$mail = mail("leoma34@hotmail.com", $subject, $message,
+$mail = mail("yourmail@address.com", $subject, $message,
 
 "From: ".$name." <".$email."> "."Reply-To: ".$email." "." X-Mailer: PHP/" . phpversion());
 if($mail)
