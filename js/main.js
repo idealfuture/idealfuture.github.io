@@ -253,9 +253,9 @@ $('#pause').on("click", function() {
 /* ================================= */
 
 //set your google maps parameters
-var latitude = 49.246292,
-    longitude = -123.116226,
-    map_zoom = 11;
+var latitude = 49.239722,
+    longitude = -123.010271,
+    map_zoom = 10;
 
 //google map custom marker icon - .png fallback for IE11
 var is_internetExplorer11 = navigator.userAgent.toLowerCase().indexOf('trident') > -1;
